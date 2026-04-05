@@ -1,0 +1,242 @@
+export default function ImperioRefrigeracaoSite() { const services = [ { number: "01", title: "Ventilação, Bombas de Calor e Certificação de Gases Fluorados", text: "Trabalhamos com ventilação, bombas de calor e certificação de gases fluorados, assegurando desempenho, segurança e conformidade legal em cada projeto.", }, { number: "02", title: "Manutenção Preventiva e Corretiva", text: "Executamos manutenção preventiva para reduzir falhas e manutenção corretiva para resolver avarias com rapidez e eficiência.", }, { number: "03", title: "Instalação de Equipamentos", text: "Realizamos instalações com atenção técnica, acabamento limpo e foco em durabilidade, desempenho e conforto do cliente.", }, ];
+
+const advantages = [ { title: "Profissionais Qualificados e Experientes", text: "A nossa equipa é formada por técnicos certificados, garantindo instalações seguras, precisas e alinhadas com as melhores práticas do setor.", }, { title: "Atendimento Rápido e Personalizado", text: "Oferecemos acompanhamento próximo, agendamento flexível e soluções adaptadas às necessidades específicas de cada cliente.", }, { title: "Garantia de Serviço e Suporte Pós-Instalação", text: "Não entregamos apenas o serviço. Mantemos suporte e acompanhamento para assegurar o bom funcionamento dos equipamentos ao longo do tempo.", }, ];
+
+const clientAreas = ["Lisboa Centro", "Almada", "Oeiras", "Sintra", "Cascais", "Setúbal"];
+
+const stats = [ { value: "+40", label: "Clientes atendidos" }, { value: "3 anos", label: "Experiência em Portugal" }, { value: "100%", label: "Foco em qualidade" }, ];
+
+return ( <div className="min-h-screen bg-white text-slate-900"> <header className="relative overflow-hidden bg-slate-950 text-white"> <div className="absolute inset-0"> <img
+src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1600&q=80"
+alt="Técnico de climatização"
+className="h-full w-full object-cover opacity-20"
+/> <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-blue-950/75" /> </div>
+
+<div className="relative mx-auto max-w-7xl px-6 py-6 lg:px-8">
+      <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500 text-xl font-black text-white shadow-xl">
+            A
+          </div>
+          <div>
+            <div className="text-2xl font-black tracking-[0.2em] text-white">CLEAN AIR</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-100">
+              Climatização de Excelência
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <a
+            href="#servicos"
+            className="rounded-2xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/15"
+          >
+            Ver serviços
+          </a>
+          <a
+            href="https://wa.me/351000000000"
+            className="rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg transition hover:scale-[1.02]"
+          >
+            Pedir orçamento
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-28 lg:pt-12">
+      <div>
+        <div className="mb-5 inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium text-blue-100 backdrop-blur">
+          Apresentação Comercial
+        </div>
+        <h1 className="max-w-3xl text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
+          Soluções de climatização e refrigeração com excelência
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          Soluções eficientes, seguras e alinhadas com as normas europeias, pensadas para melhorar o desempenho dos equipamentos e reduzir custos em instalações residenciais e comerciais.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          {stats.map((stat) => (
+            <div key={stat.label} className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
+              <div className="text-2xl font-black text-cyan-300">{stat.value}</div>
+              <div className="mt-1 text-sm text-slate-200">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="lg:pl-6">
+        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl backdrop-blur">
+          <img
+            src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80"
+            alt="Serviço técnico de climatização"
+            className="h-[480px] w-full rounded-[1.5rem] object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="quem-somos" className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
+    <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div className="overflow-hidden rounded-[2rem] shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80"
+          alt="Técnico a realizar manutenção"
+          className="h-[560px] w-full object-cover"
+        />
+      </div>
+
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Quem somos</p>
+        <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-slate-900">
+          Experiência, confiança e atenção a cada detalhe
+        </h2>
+        <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
+          <p>
+            A Clean Air, fundada em 2006, atua na área de AVAC, oferecendo serviços a clientes finais e empresas parceiras, com experiência em instalações industriais, residenciais e manutenções preventivas e corretivas.
+          </p>
+          <p>
+            O nosso foco é garantir o bem-estar dos clientes, fornecendo soluções eficientes, económicas e de alta qualidade em climatização, sempre em conformidade com as normas e diretivas europeias.
+          </p>
+          <p>
+            Contamos com técnicos certificados em gases fluorados e utilizamos equipamentos que cumprem as normas ATEX, assegurando segurança e excelência em todos os projetos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" className="bg-slate-50 py-16 lg:py-24">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="max-w-3xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Nossos serviços</p>
+        <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-slate-900">
+          Soluções técnicas para climatização e refrigeração
+        </h2>
+        <p className="mt-4 text-base leading-8 text-slate-600">
+          Trabalhamos com instalação, manutenção e serviços especializados para garantir eficiência, segurança e desempenho duradouro.
+        </p>
+      </div>
+
+      <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        {services.map((service) => (
+          <div key={service.title} className="rounded-[2rem] bg-blue-700 p-7 text-white shadow-xl transition hover:-translate-y-1 hover:bg-blue-800">
+            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">{service.number}</div>
+            <h3 className="mt-4 text-2xl font-bold leading-tight">{service.title}</h3>
+            <p className="mt-4 text-sm leading-7 text-blue-50">{service.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
+    <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="rounded-[2rem] bg-slate-950 p-8 text-white shadow-2xl lg:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Nossos clientes</p>
+        <h2 className="mt-3 text-4xl font-black uppercase leading-tight">
+          Atendimento próximo em Lisboa e arredores
+        </h2>
+        <p className="mt-4 text-base leading-8 text-slate-300">
+          Os nossos clientes concentram-se na região de Lisboa e arredores, o que nos permite oferecer um serviço rápido, próximo e personalizado.
+        </p>
+        <div className="mt-8 grid grid-cols-2 gap-4">
+          {clientAreas.map((area) => (
+            <div key={area} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-center text-sm font-semibold text-slate-100">
+              {area}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="rounded-[2rem] bg-gradient-to-br from-blue-700 to-cyan-500 px-8 py-12 text-white shadow-2xl lg:px-12 lg:py-16">
+        <div className="text-4xl font-black uppercase sm:text-5xl lg:text-6xl">+ 40 clientes atendidos</div>
+        <div className="mt-3 text-2xl font-semibold uppercase tracking-wide text-blue-50">Em apenas 3 anos</div>
+        <p className="mt-6 max-w-xl text-base leading-8 text-blue-50">
+          Um percurso construído com compromisso, qualidade técnica e foco em relações duradouras com cada cliente em Portugal.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section className="bg-slate-50 py-16 lg:py-24">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="overflow-hidden rounded-[2rem] shadow-xl">
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+            alt="Parceiros e clientes"
+            className="h-[560px] w-full object-cover"
+          />
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Vantagens</p>
+          <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-slate-900">
+            Vantagens de ser nosso parceiro
+          </h2>
+          <div className="mt-8 space-y-5">
+            {advantages.map((item) => (
+              <div key={item.title} className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+                <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
+    <div className="overflow-hidden rounded-[2rem] bg-slate-950 text-white shadow-2xl">
+      <div className="grid items-center lg:grid-cols-2">
+        <div className="p-8 lg:p-12">
+          <div className="mb-5 flex items-center gap-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500 text-xl font-black text-white shadow-xl">
+              A
+            </div>
+            <div>
+              <div className="text-2xl font-black tracking-[0.2em] text-white">CLEAN AIR</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-100">
+                Climatização de Excelência
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-4xl font-black uppercase leading-tight">
+            Obrigado por receber a nossa proposta
+          </h2>
+          <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
+            Estamos prontos para apresentar soluções de climatização com seriedade, competência técnica e acompanhamento profissional.
+          </p>
+
+          <div className="mt-8 grid gap-4 text-base text-slate-200">
+            <div><span className="font-bold text-white">Telefone 1:</span> +351 968 829 592</div>
+            <div><span className="font-bold text-white">Telefone 2:</span> +351 966 195 567</div>
+            <div><span className="font-bold text-white">E-mail:</span> portugal.cleanair@gmail.com</div>
+            <div><span className="font-bold text-white">Morada:</span> Rua do bairro Novo, 635, São Domingos De Rana - Lisboa Cascais</div>
+          </div>
+
+          <a
+            href="https://wa.me/351000000000"
+            className="mt-8 inline-flex rounded-2xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg transition hover:scale-[1.02]"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <div className="h-full">
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+            alt="Obrigado pela proposta"
+            className="h-full min-h-[420px] w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+); }
