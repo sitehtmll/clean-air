@@ -1,706 +1,399 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clean Air | Climatização de Excelência</title>
-  <meta name="description" content="Soluções premium em climatização e refrigeração. Instalação, manutenção, ventilação, bombas de calor e certificação de gases fluorados." />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #ffffff;
-      color: #0f172a;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #e5eef8;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 0;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand-box {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #38bdf8, #2563eb);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 20px;
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.22);
-    }
-
-    .brand h1 {
-      font-size: 24px;
-      letter-spacing: 0.14em;
-      color: #0f172a;
-    }
-
-    .brand p {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.24em;
-      color: #2563eb;
-      font-weight: 700;
-      margin-top: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: 0.25s ease;
-      font-size: 14px;
-    }
-
-    .btn-outline {
-      border: 1px solid #cfe2f7;
-      color: #2563eb;
-      background: #ffffff;
-    }
-
-    .btn-outline:hover {
-      background: #f3f9ff;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #38bdf8, #2563eb);
-      color: #fff;
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-    }
-
-    .hero {
-      background:
-        linear-gradient(rgba(8, 15, 31, 0.76), rgba(8, 15, 31, 0.76)),
-        url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: white;
-      padding: 90px 0 80px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
-      color: #fde7a9;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 {
-      font-size: 52px;
-      line-height: 1.08;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #d8e3f0;
-      max-width: 650px;
-    }
-
-    .hero-actions {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .hero-stats {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
-      padding: 18px;
-      backdrop-filter: blur(8px);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      color: #fde7a9;
-      margin-bottom: 4px;
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 28px;
-      padding: 14px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
-    }
-
-    .hero-card img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 22px;
-      display: block;
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    .section-title-small {
-      color: #2563eb;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: 40px;
-      line-height: 1.15;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      color: #0f172a;
-    }
-
-    .section-text {
-      color: #475569;
-      font-size: 17px;
-    }
-
-    .about-grid,
-    .coverage-grid,
-    .contact-grid,
-    .premium-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .image-box {
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
-      border: 1px solid #e8eef5;
-    }
-
-    .image-box img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .about-text p {
-      margin-bottom: 16px;
-      color: #475569;
-      font-size: 16px;
-    }
-
-    .services {
-      background: linear-gradient(to bottom, #f6fbff, #ffffff);
-    }
-
-    .cards {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e6eef8;
-      border-radius: 24px;
-      padding: 28px 24px;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-      transition: 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.09);
-    }
-
-    .gold-line {
-      width: 64px;
-      height: 4px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #38bdf8, #f4d17a);
-      margin-bottom: 16px;
-    }
-
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-      color: #0f172a;
-    }
-
-    .card p {
-      color: #475569;
-      font-size: 15px;
-    }
-
-    .coverage-box {
-      background: white;
-      border: 1px solid #e8eef5;
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.06);
-    }
-
-    .areas {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .area {
-      background: #f0f8ff;
-      border: 1px solid #d8ebfb;
-      border-radius: 16px;
-      padding: 14px;
-      text-align: center;
-      font-weight: 700;
-      color: #334155;
-    }
-
-    .highlight-box {
-      background: linear-gradient(135deg, #38bdf8, #2563eb, #0f172a);
-      color: white;
-      border-radius: 28px;
-      padding: 42px;
-      box-shadow: 0 20px 45px rgba(37, 99, 235, 0.22);
-    }
-
-    .highlight-box h3 {
-      font-size: 48px;
-      line-height: 1.05;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .highlight-box p {
-      color: #e5f3ff;
-      font-size: 17px;
-    }
-
-    .premium-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .premium-item {
-      background: #f8fafc;
-      border: 1px solid #e8eef5;
-      border-radius: 18px;
-      padding: 16px 18px;
-      font-weight: 700;
-      color: #334155;
-      box-shadow: 0 6px 18px rgba(15,23,42,0.04);
-    }
-
-    .contact-section {
-      padding-top: 10px;
-      padding-bottom: 90px;
-    }
-
-    .contact-box {
-      background: #08101e;
-      color: white;
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 22px 50px rgba(2, 6, 23, 0.25);
-    }
-
-    .contact-content {
-      padding: 42px;
-    }
-
-    .contact-content h3 {
-      font-size: 38px;
-      text-transform: uppercase;
-      line-height: 1.12;
-      margin-bottom: 14px;
-    }
-
-    .contact-content p {
-      color: #d6e2f0;
-      margin-bottom: 22px;
-      font-size: 16px;
-    }
-
-    .contact-info div {
-      margin-bottom: 12px;
-      font-size: 16px;
-      color: #f1f5f9;
-    }
-
-    .contact-info strong {
-      color: #ffffff;
-    }
-
-    .contact-image {
-      padding: 14px;
-    }
-
-    .contact-image img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 22px;
-      display: block;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: #22c55e;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 18px 30px rgba(34, 197, 94, 0.28);
-      z-index: 2000;
-    }
-
-    .footer {
-      background: #f8fbff;
-      border-top: 1px solid #e8eef5;
-      padding: 24px 0;
-      color: #64748b;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .about-grid,
-      .coverage-grid,
-      .contact-grid,
-      .premium-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero h2 {
-        font-size: 40px;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .cards,
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .areas {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h2,
-      .section-title,
-      .contact-content h3 {
-        font-size: 30px;
-      }
-
-      .hero,
-      section {
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
-
-      .contact-content,
-      .highlight-box,
-      .coverage-box {
-        padding: 26px;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clean Air | Climatização de Excelência</title>
+
+<meta name="description"
+content="Soluções premium em climatização e refrigeração. Instalação, manutenção, ventilação, bombas de calor e certificação de gases fluorados em todo Portugal." />
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#0f172a;
+line-height:1.6;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+.topbar{
+position:sticky;
+top:0;
+background:white;
+border-bottom:1px solid #e5eef8;
+z-index:999;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.brand{
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+.brand-box{
+width:46px;
+height:46px;
+border-radius:14px;
+background:linear-gradient(135deg,#38bdf8,#2563eb);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:700;
+font-size:20px;
+}
+
+.brand h1{
+font-size:24px;
+letter-spacing:.14em;
+}
+
+.brand p{
+font-size:11px;
+letter-spacing:.22em;
+color:#2563eb;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:12px;
+}
+
+.btn{
+padding:13px 22px;
+border-radius:14px;
+font-weight:700;
+font-size:14px;
+display:inline-block;
+}
+
+.btn-outline{
+border:1px solid #cfe2f7;
+color:#2563eb;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#38bdf8,#2563eb);
+color:white;
+}
+
+.hero{
+background:
+linear-gradient(rgba(8,15,31,.76),rgba(8,15,31,.76)),
+url("https://images.unsplash.com/photo-1631545806521-400a95f79639?auto=format&fit=crop&w=1600&q=80")
+center/cover no-repeat;
+
+color:white;
+padding:90px 0;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:40px;
+align-items:center;
+}
+
+.hero h2{
+font-size:52px;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:18px;
+color:#d8e3f0;
+}
+
+.hero-actions{
+margin-top:24px;
+display:flex;
+gap:12px;
+}
+
+.hero-card img{
+width:100%;
+height:360px;
+object-fit:cover;
+border-radius:22px;
+}
+
+section{
+padding:80px 0;
+}
+
+.section-title-small{
+color:#2563eb;
+letter-spacing:.22em;
+font-size:13px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:16px;
+}
+
+.section-text{
+color:#475569;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+border:1px solid #e6eef8;
+border-radius:24px;
+padding:28px;
+}
+
+.gold-line{
+width:64px;
+height:4px;
+background:linear-gradient(90deg,#38bdf8,#f4d17a);
+margin-bottom:16px;
+}
+
+.coverage-box{
+background:white;
+border:1px solid #e8eef5;
+border-radius:28px;
+padding:34px;
+}
+
+.areas{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:20px;
+}
+
+.area{
+background:#f0f8ff;
+border-radius:16px;
+padding:14px;
+text-align:center;
+font-weight:700;
+}
+
+.highlight-box{
+background:linear-gradient(135deg,#38bdf8,#2563eb,#0f172a);
+color:white;
+border-radius:28px;
+padding:42px;
+}
+
+.image-box img{
+width:100%;
+height:360px;
+object-fit:cover;
+border-radius:22px;
+}
+
+.contact-box{
+background:#08101e;
+color:white;
+border-radius:30px;
+padding:42px;
+}
+
+.whatsapp-float{
+position:fixed;
+right:18px;
+bottom:18px;
+background:#22c55e;
+color:white;
+padding:14px 18px;
+border-radius:999px;
+font-weight:700;
+}
+
+.footer{
+background:#f8fbff;
+border-top:1px solid #e8eef5;
+padding:24px;
+text-align:center;
+}
+
+</style>
 </head>
+
 <body>
 
-  <div class="topbar">
-    <div class="container nav">
-      <div class="brand">
-        <div class="brand-box">A</div>
-        <div>
-          <h1>CLEAN AIR</h1>
-          <p>Climatização de Excelência</p>
-        </div>
-      </div>
+<div class="topbar">
+<div class="container nav">
 
-      <div class="nav-links">
-        <a href="#servicos" class="btn btn-outline">Serviços</a>
-        <a href="#contacto" class="btn btn-primary">Pedir orçamento</a>
-      </div>
-    </div>
-  </div>
+<div class="brand">
+<div class="brand-box">A</div>
+<div>
+<h1>CLEAN AIR</h1>
+<p>Climatização de Excelência</p>
+</div>
+</div>
 
-  <header class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="tag">Soluções premium em climatização e refrigeração</div>
-        <h2>Conforto, eficiência e excelência técnica para cada ambiente</h2>
-        <p>
-          A Clean Air entrega soluções de climatização com um padrão profissional elevado,
-          unindo desempenho, segurança e acompanhamento técnico de confiança.
-        </p>
+<div class="nav-links">
+<a href="#servicos" class="btn btn-outline">Serviços</a>
+<a href="#contacto" class="btn btn-primary">Pedir orçamento</a>
+</div>
 
-        <div class="hero-actions">
-          <a href="#sobre" class="btn" style="background:#fff;color:#0f172a;">Conhecer a empresa</a>
-          <a href="https://wa.me/351000000000" class="btn" style="background:rgba(255,255,255,0.10);color:#fff;border:1px solid rgba(255,255,255,0.18);">Falar no WhatsApp</a>
-        </div>
+</div>
+</div>
 
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>+40</strong>
-            Clientes atendidos
-          </div>
-          <div class="stat">
-            <strong>Desde 2006</strong>
-            Experiência no setor
-          </div>
-          <div class="stat">
-            <strong>Lisboa</strong>
-            Foco regional
-          </div>
-        </div>
-      </div>
 
-      <div class="hero-card">
-        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80" alt="Técnico profissional Clean Air">
-      </div>
-    </div>
-  </header>
+<header class="hero">
 
-  <section id="sobre">
-    <div class="container about-grid">
-      <div class="image-box">
-        <img src="https://images.unsplash.com/photo-1621330396173-e41b6b6b39b4?auto=format&fit=crop&w=1200&q=80" alt="Equipamento de climatização">
-      </div>
+<div class="container hero-grid">
 
-      <div class="about-text">
-        <div class="section-title-small">Quem somos</div>
-        <h2 class="section-title">Uma empresa focada em qualidade, confiança e resultado</h2>
-        <p>
-          A Clean Air, fundada em 2006, atua na área de AVAC, oferecendo serviços a clientes finais e empresas parceiras, com experiência em instalações industriais, residenciais e manutenções preventivas e corretivas.
-        </p>
-        <p>
-          O nosso foco é garantir o bem-estar dos clientes, fornecendo soluções eficientes, económicas e de alta qualidade em climatização, sempre em conformidade com as normas e diretivas europeias.
-        </p>
-        <p>
-          Contamos com técnicos certificados em gases fluorados e utilizamos equipamentos que cumprem as normas ATEX, assegurando segurança e excelência em todos os projetos.
-        </p>
-      </div>
-    </div>
-  </section>
+<div>
 
-  <section id="servicos" class="services">
-    <div class="container">
-      <div class="section-title-small">Serviços</div>
-      <h2 class="section-title">Serviços técnicos com apresentação premium</h2>
-      <p class="section-text">
-        Estrutura profissional para apresentar a empresa com clareza, elegância e uma imagem forte perante clientes residenciais e empresariais.
-      </p>
+<h2>
+Conforto térmico profissional em todo Portugal
+</h2>
 
-      <div class="cards">
-        <div class="card">
-          <div class="gold-line"></div>
-          <h3>Instalação de Equipamentos</h3>
-          <p>Instalações de climatização com acabamento profissional, segurança técnica e atenção a cada detalhe do projeto.</p>
-        </div>
+<p>
+Instalação, manutenção e assistência técnica especializada em climatização residencial e empresarial.
+</p>
 
-        <div class="card">
-          <div class="gold-line"></div>
-          <h3>Manutenção Preventiva</h3>
-          <p>Planos de manutenção para preservar desempenho, evitar falhas e prolongar a vida útil dos equipamentos.</p>
-        </div>
+<div class="hero-actions">
 
-        <div class="card">
-          <div class="gold-line"></div>
-          <h3>Manutenção Corretiva</h3>
-          <p>Diagnóstico rápido e intervenção técnica para restaurar o funcionamento com eficiência e confiança.</p>
-        </div>
+<a href="#sobre"
+class="btn"
+style="background:white;color:#0f172a;">
+Conhecer a empresa
+</a>
 
-        <div class="card">
-          <div class="gold-line"></div>
-          <h3>Bombas de Calor e Ventilação</h3>
-          <p>Soluções modernas para conforto térmico, ventilação e eficiência energética em residências e empresas.</p>
-        </div>
+<a href="https://wa.me/351968829592"
+class="btn"
+style="background:rgba(255,255,255,.10);color:white;border:1px solid rgba(255,255,255,.18);">
+Falar no WhatsApp
+</a>
 
-        <div class="card">
-          <div class="gold-line"></div>
-          <h3>Certificação de Gases Fluorados</h3>
-          <p>Serviços executados com responsabilidade técnica e conformidade com as exigências regulamentares.</p>
-        </div>
+</div>
 
-        <div class="card">
-          <div class="gold-line"></div>
-          <h3>Acompanhamento Profissional</h3>
-          <p>Atendimento próximo, suporte pós-serviço e orientação especializada para cada cliente.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <section>
-    <div class="container coverage-grid">
-      <div class="coverage-box">
-        <div class="section-title-small">Cobertura</div>
-        <h2 class="section-title">Atendimento próximo em Lisboa e arredores</h2>
-        <p class="section-text">
-          Presença regional que permite rapidez, acompanhamento próximo e um serviço mais personalizado em cada intervenção.
-        </p>
+<div class="hero-card">
 
-        <div class="areas">
-          <div class="area">Lisboa Centro</div>
-          <div class="area">Almada</div>
-          <div class="area">Oeiras</div>
-          <div class="area">Sintra</div>
-          <div class="area">Cascais</div>
-          <div class="area">Setúbal</div>
-        </div>
-      </div>
+<img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80">
 
-      <div class="highlight-box">
-        <h3>+ 40 clientes atendidos</h3>
-        <p>
-          Uma trajetória construída com responsabilidade técnica, proximidade ao cliente e um compromisso permanente com a excelência do serviço em Portugal.
-        </p>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <section>
-    <div class="container premium-grid">
-      <div class="image-box">
-        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Relacionamento profissional">
-      </div>
+</div>
 
-      <div>
-        <div class="section-title-small">Diferenciais</div>
-        <h2 class="section-title">Vantagens de trabalhar com a Clean Air</h2>
+</header>
 
-        <div class="premium-list">
-          <div class="premium-item">Técnicos qualificados e experientes</div>
-          <div class="premium-item">Atendimento rápido e personalizado</div>
-          <div class="premium-item">Soluções eficientes e seguras</div>
-          <div class="premium-item">Suporte e acompanhamento pós-serviço</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="contacto" class="contact-section">
-    <div class="container contact-box">
-      <div class="contact-grid">
-        <div class="contact-content">
-          <div class="section-title-small" style="color:#7dd3fc;">Contacto</div>
-          <h3>Fale com uma equipa preparada para entregar qualidade</h3>
-          <p>
-            Uma apresentação moderna, elegante e profissional para transmitir confiança desde o primeiro contacto com o cliente.
-          </p>
+<section id="servicos">
 
-          <div class="contact-info">
-            <div><strong>Telefone 1:</strong> +351 968 829 592</div>
-            <div><strong>Telefone 2:</strong> +351 966 195 567</div>
-            <div><strong>E-mail:</strong> portugal.cleanair@gmail.com</div>
-            <div><strong>Morada:</strong> Rua do bairro Novo, 635, São Domingos de Rana - Lisboa Cascais</div>
-          </div>
+<div class="container">
 
-          <div style="margin-top:22px;">
-            <a href="https://wa.me/351000000000" class="btn btn-primary">Falar no WhatsApp</a>
-          </div>
-        </div>
+<div class="section-title-small">
+Cobertura
+</div>
 
-        <div class="contact-image">
-          <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Atendimento Clean Air">
-        </div>
-      </div>
-    </div>
-  </section>
+<h2 class="section-title">
+Atendimento em todo Portugal
+</h2>
 
-  <div class="footer">
-    <div class="container">
-      © 2026 Clean Air — Climatização de Excelência
-    </div>
-  </div>
+<p class="section-text">
+Executamos serviços técnicos de climatização em todo o território nacional.
+</p>
 
-  <a class="whatsapp-float" href="https://wa.me/351000000000">WhatsApp</a>
+
+<div class="areas">
+
+<div class="area">Lisboa</div>
+<div class="area">Porto</div>
+<div class="area">Braga</div>
+<div class="area">Coimbra</div>
+<div class="area">Faro</div>
+<div class="area">Todo Portugal</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contacto">
+
+<div class="container contact-box">
+
+<h3>Contacte a Clean Air</h3>
+
+<p>
+Equipa técnica preparada para responder rapidamente ao seu pedido.
+</p>
+
+<p>
+Telefone: +351 968 829 592
+</p>
+
+<p>
+Telefone: +351 966 195 567
+</p>
+
+<p>
+Email: portugal.cleanair@gmail.com
+</p>
+
+<a
+href="https://wa.me/351968829592"
+class="btn btn-primary">
+
+Falar no WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+<div class="footer">
+© 2026 Clean Air — Climatização de Excelência
+</div>
+
+
+<a
+class="whatsapp-float"
+href="https://wa.me/351968829592">
+
+WhatsApp
+
+</a>
+
 
 </body>
 </html>
