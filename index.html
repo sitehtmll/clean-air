@@ -6,21 +6,23 @@ const clientAreas = ["Lisboa Centro", "Almada", "Oeiras", "Sintra", "Cascais", "
 
 const stats = [ { value: "+40", label: "Clientes atendidos" }, { value: "3 anos", label: "Experiência em Portugal" }, { value: "100%", label: "Foco em qualidade" }, ];
 
-return ( <div className="min-h-screen bg-white text-slate-900"> <header className="relative overflow-hidden bg-slate-950 text-white"> <div className="absolute inset-0"> <img
-src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1600&q=80"
-alt="Técnico de climatização"
-className="h-full w-full object-cover opacity-20"
-/> <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-blue-950/75" /> </div>
+return ( <div className="min-h-screen bg-white text-slate-900"> <a
+href="https://wa.me/351000000000"
+className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white shadow-2xl transition hover:scale-[1.03]"
+> WhatsApp </a>
 
-<div className="relative mx-auto max-w-7xl px-6 py-6 lg:px-8">
+<header className="relative overflow-hidden bg-gradient-to-b from-sky-50 to-white">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.1),transparent_35%)]" />
+
+    <div className="relative mx-auto max-w-7xl px-6 py-6 lg:px-8">
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500 text-xl font-black text-white shadow-xl">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-500 text-lg font-black text-white shadow-lg">
             A
           </div>
           <div>
-            <div className="text-2xl font-black tracking-[0.2em] text-white">CLEAN AIR</div>
-            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-100">
+            <div className="text-2xl font-black tracking-[0.16em] text-slate-900">CLEAN AIR</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
               Climatização de Excelência
             </div>
           </div>
@@ -29,13 +31,13 @@ className="h-full w-full object-cover opacity-20"
         <div className="flex flex-wrap gap-3">
           <a
             href="#servicos"
-            className="rounded-2xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/15"
+            className="rounded-2xl border border-sky-200 bg-white px-5 py-3 text-sm font-semibold text-sky-700 shadow-sm transition hover:bg-sky-50"
           >
             Ver serviços
           </a>
           <a
             href="https://wa.me/351000000000"
-            className="rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg transition hover:scale-[1.02]"
+            className="rounded-2xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-[1.02]"
           >
             Pedir orçamento
           </a>
@@ -43,52 +45,52 @@ className="h-full w-full object-cover opacity-20"
       </div>
     </div>
 
-    <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-28 lg:pt-12">
+    <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-4 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-20 lg:pt-8">
       <div>
-        <div className="mb-5 inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium text-blue-100 backdrop-blur">
+        <div className="mb-5 inline-flex rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-medium text-sky-700 shadow-sm">
           Apresentação Comercial
         </div>
-        <h1 className="max-w-3xl text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
+        <h1 className="max-w-3xl text-4xl font-black uppercase leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
           Soluções de climatização e refrigeração com excelência
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
           Soluções eficientes, seguras e alinhadas com as normas europeias, pensadas para melhorar o desempenho dos equipamentos e reduzir custos em instalações residenciais e comerciais.
         </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {stats.map((stat) => (
-            <div key={stat.label} className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
-              <div className="text-2xl font-black text-cyan-300">{stat.value}</div>
-              <div className="mt-1 text-sm text-slate-200">{stat.label}</div>
+            <div key={stat.label} className="rounded-[1.5rem] border border-sky-100 bg-white p-5 shadow-sm">
+              <div className="text-2xl font-black text-sky-600">{stat.value}</div>
+              <div className="mt-1 text-sm text-slate-600">{stat.label}</div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="lg:pl-6">
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl backdrop-blur">
+      <div className="lg:pl-4">
+        <div className="overflow-hidden rounded-[2rem] border border-sky-100 bg-white p-3 shadow-xl">
           <img
             src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80"
             alt="Serviço técnico de climatização"
-            className="h-[480px] w-full rounded-[1.5rem] object-cover"
+            className="h-[320px] w-full rounded-[1.5rem] object-cover"
           />
         </div>
       </div>
     </div>
   </header>
 
-  <section id="quem-somos" className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-    <div className="grid items-center gap-10 lg:grid-cols-2">
-      <div className="overflow-hidden rounded-[2rem] shadow-xl">
+  <section id="quem-somos" className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+    <div className="grid items-center gap-8 lg:grid-cols-2">
+      <div className="overflow-hidden rounded-[2rem] border border-sky-100 shadow-lg">
         <img
           src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80"
           alt="Técnico a realizar manutenção"
-          className="h-[560px] w-full object-cover"
+          className="h-[320px] w-full object-cover"
         />
       </div>
 
       <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Quem somos</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Quem somos</p>
         <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-slate-900">
           Experiência, confiança e atenção a cada detalhe
         </h2>
@@ -107,10 +109,10 @@ className="h-full w-full object-cover opacity-20"
     </div>
   </section>
 
-  <section id="servicos" className="bg-slate-50 py-16 lg:py-24">
+  <section id="servicos" className="bg-sky-50/60 py-14 lg:py-20">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Nossos serviços</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Nossos serviços</p>
         <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-slate-900">
           Soluções técnicas para climatização e refrigeração
         </h2>
@@ -121,64 +123,64 @@ className="h-full w-full object-cover opacity-20"
 
       <div className="mt-10 grid gap-6 lg:grid-cols-3">
         {services.map((service) => (
-          <div key={service.title} className="rounded-[2rem] bg-blue-700 p-7 text-white shadow-xl transition hover:-translate-y-1 hover:bg-blue-800">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">{service.number}</div>
-            <h3 className="mt-4 text-2xl font-bold leading-tight">{service.title}</h3>
-            <p className="mt-4 text-sm leading-7 text-blue-50">{service.text}</p>
+          <div key={service.title} className="rounded-[2rem] border border-sky-100 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-600">{service.number}</div>
+            <h3 className="mt-4 text-2xl font-bold leading-tight text-slate-900">{service.title}</h3>
+            <p className="mt-4 text-sm leading-7 text-slate-600">{service.text}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-    <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-      <div className="rounded-[2rem] bg-slate-950 p-8 text-white shadow-2xl lg:p-10">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Nossos clientes</p>
-        <h2 className="mt-3 text-4xl font-black uppercase leading-tight">
+  <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+    <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="rounded-[2rem] bg-white p-8 shadow-lg ring-1 ring-sky-100 lg:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Nossos clientes</p>
+        <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-slate-900">
           Atendimento próximo em Lisboa e arredores
         </h2>
-        <p className="mt-4 text-base leading-8 text-slate-300">
+        <p className="mt-4 text-base leading-8 text-slate-600">
           Os nossos clientes concentram-se na região de Lisboa e arredores, o que nos permite oferecer um serviço rápido, próximo e personalizado.
         </p>
         <div className="mt-8 grid grid-cols-2 gap-4">
           {clientAreas.map((area) => (
-            <div key={area} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-center text-sm font-semibold text-slate-100">
+            <div key={area} className="rounded-2xl border border-sky-100 bg-sky-50 px-4 py-3 text-center text-sm font-semibold text-slate-700">
               {area}
             </div>
           ))}
         </div>
       </div>
 
-      <div className="rounded-[2rem] bg-gradient-to-br from-blue-700 to-cyan-500 px-8 py-12 text-white shadow-2xl lg:px-12 lg:py-16">
+      <div className="rounded-[2rem] bg-gradient-to-br from-sky-500 to-blue-500 px-8 py-12 text-white shadow-2xl lg:px-12 lg:py-16">
         <div className="text-4xl font-black uppercase sm:text-5xl lg:text-6xl">+ 40 clientes atendidos</div>
-        <div className="mt-3 text-2xl font-semibold uppercase tracking-wide text-blue-50">Em apenas 3 anos</div>
-        <p className="mt-6 max-w-xl text-base leading-8 text-blue-50">
+        <div className="mt-3 text-2xl font-semibold uppercase tracking-wide text-sky-50">Em apenas 3 anos</div>
+        <p className="mt-6 max-w-xl text-base leading-8 text-sky-50">
           Um percurso construído com compromisso, qualidade técnica e foco em relações duradouras com cada cliente em Portugal.
         </p>
       </div>
     </div>
   </section>
 
-  <section className="bg-slate-50 py-16 lg:py-24">
+  <section className="bg-sky-50/60 py-14 lg:py-20">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      <div className="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="overflow-hidden rounded-[2rem] shadow-xl">
+      <div className="grid items-start gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="overflow-hidden rounded-[2rem] border border-sky-100 shadow-lg">
           <img
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
             alt="Parceiros e clientes"
-            className="h-[560px] w-full object-cover"
+            className="h-[320px] w-full object-cover"
           />
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Vantagens</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-700">Vantagens</p>
           <h2 className="mt-3 text-4xl font-black uppercase leading-tight text-slate-900">
             Vantagens de ser nosso parceiro
           </h2>
           <div className="mt-8 space-y-5">
             {advantages.map((item) => (
-              <div key={item.title} className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+              <div key={item.title} className="rounded-[2rem] border border-sky-100 bg-white p-6 shadow-sm transition hover:shadow-md">
                 <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
               </div>
@@ -189,49 +191,49 @@ className="h-full w-full object-cover opacity-20"
     </div>
   </section>
 
-  <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-    <div className="overflow-hidden rounded-[2rem] bg-slate-950 text-white shadow-2xl">
+  <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-20">
+    <div className="overflow-hidden rounded-[2rem] bg-white shadow-2xl ring-1 ring-sky-100">
       <div className="grid items-center lg:grid-cols-2">
         <div className="p-8 lg:p-12">
           <div className="mb-5 flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500 text-xl font-black text-white shadow-xl">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-500 text-lg font-black text-white shadow-lg">
               A
             </div>
             <div>
-              <div className="text-2xl font-black tracking-[0.2em] text-white">CLEAN AIR</div>
-              <div className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-100">
+              <div className="text-2xl font-black tracking-[0.16em] text-slate-900">CLEAN AIR</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
                 Climatização de Excelência
               </div>
             </div>
           </div>
 
-          <h2 className="text-4xl font-black uppercase leading-tight">
+          <h2 className="text-4xl font-black uppercase leading-tight text-slate-900">
             Obrigado por receber a nossa proposta
           </h2>
-          <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
+          <p className="mt-5 max-w-xl text-base leading-8 text-slate-600">
             Estamos prontos para apresentar soluções de climatização com seriedade, competência técnica e acompanhamento profissional.
           </p>
 
-          <div className="mt-8 grid gap-4 text-base text-slate-200">
-            <div><span className="font-bold text-white">Telefone 1:</span> +351 968 829 592</div>
-            <div><span className="font-bold text-white">Telefone 2:</span> +351 966 195 567</div>
-            <div><span className="font-bold text-white">E-mail:</span> portugal.cleanair@gmail.com</div>
-            <div><span className="font-bold text-white">Morada:</span> Rua do bairro Novo, 635, São Domingos De Rana - Lisboa Cascais</div>
+          <div className="mt-8 grid gap-4 text-base text-slate-700">
+            <div><span className="font-bold text-slate-900">Telefone 1:</span> +351 968 829 592</div>
+            <div><span className="font-bold text-slate-900">Telefone 2:</span> +351 966 195 567</div>
+            <div><span className="font-bold text-slate-900">E-mail:</span> portugal.cleanair@gmail.com</div>
+            <div><span className="font-bold text-slate-900">Morada:</span> Rua do bairro Novo, 635, São Domingos De Rana - Lisboa Cascais</div>
           </div>
 
           <a
             href="https://wa.me/351000000000"
-            className="mt-8 inline-flex rounded-2xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg transition hover:scale-[1.02]"
+            className="mt-8 inline-flex rounded-2xl bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-[1.02]"
           >
             Falar no WhatsApp
           </a>
         </div>
 
-        <div className="h-full">
+        <div className="p-4 lg:p-6">
           <img
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
             alt="Obrigado pela proposta"
-            className="h-full min-h-[420px] w-full object-cover"
+            className="h-[320px] w-full rounded-[1.5rem] object-cover"
           />
         </div>
       </div>
