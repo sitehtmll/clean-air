@@ -1,399 +1,1191 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html><html lang="pt-PT">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Clean Air | Climatização de Excelência</title>
-
-<meta name="description"
-content="Soluções premium em climatização e refrigeração. Instalação, manutenção, ventilação, bombas de calor e certificação de gases fluorados em todo Portugal." />
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Air | Climatização de Excelência</title>
+  <meta name="description" content="Clean Air em Portugal: manutenção preventiva, manutenção corretiva, instalação de ar condicionado, instalação de VRVs, ventilação, bomba de calor e certificação de gases fluorados." />
+  <meta name="keywords" content="Clean Air, climatização, ar condicionado, VRV, manutenção preventiva, manutenção corretiva, ventilação, bomba de calor, Portugal" />
+  <meta name="author" content="Clean Air" />
+  <meta property="og:title" content="Clean Air | Climatização de Excelência" />
+  <meta property="og:description" content="Serviços premium de climatização em Portugal com atendimento profissional e orçamento rápido no WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="ar-condicionado-01.jpg" />
+  <link rel="icon" type="image/png" href="logo-clean-air-completa.png" />
+  <style>
+    :root {
+      --primary: #009dff;
+      --primary-2: #0b6df0;
+      --primary-3: #083f93;
+      --dark: #041327;
+      --dark-2: #071f3c;
+      --light: #f4f9ff;
+      --white: #ffffff;
+      --text: #17324d;
+      --muted: #6d86a0;
+      --line: rgba(255, 255, 255, 0.14);
+      --shadow: 0 20px 50px rgba(3, 22, 48, 0.22);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --transition: all 0.3s ease;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-background:#ffffff;
-color:#0f172a;
-line-height:1.6;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #edf6ff 0%, #ffffff 18%, #eef7ff 100%);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.container{
-width:92%;
-max-width:1200px;
-margin:auto;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.topbar{
-position:sticky;
-top:0;
-background:white;
-border-bottom:1px solid #e5eef8;
-z-index:999;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
+ul {
+  list-style: none;
 }
 
-.brand{
-display:flex;
-gap:12px;
-align-items:center;
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
 }
 
-.brand-box{
-width:46px;
-height:46px;
-border-radius:14px;
-background:linear-gradient(135deg,#38bdf8,#2563eb);
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-weight:700;
-font-size:20px;
+.topbar {
+  background: linear-gradient(90deg, var(--dark), var(--primary-3));
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.brand h1{
-font-size:24px;
-letter-spacing:.14em;
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  font-size: 14px;
 }
 
-.brand p{
-font-size:11px;
-letter-spacing:.22em;
-color:#2563eb;
-font-weight:700;
+.topbar-left,
+.topbar-right {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.nav-links{
-display:flex;
-gap:12px;
+.topbar strong {
+  color: #8fd7ff;
 }
 
-.btn{
-padding:13px 22px;
-border-radius:14px;
-font-weight:700;
-font-size:14px;
-display:inline-block;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(8, 63, 147, 0.08);
 }
 
-.btn-outline{
-border:1px solid #cfe2f7;
-color:#2563eb;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 84px;
 }
 
-.btn-primary{
-background:linear-gradient(135deg,#38bdf8,#2563eb);
-color:white;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.hero{
-background:
-linear-gradient(rgba(8,15,31,.76),rgba(8,15,31,.76)),
-url("https://images.unsplash.com/photo-1631545806521-400a95f79639?auto=format&fit=crop&w=1600&q=80")
-center/cover no-repeat;
-
-color:white;
-padding:90px 0;
+.logo img {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:40px;
-align-items:center;
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  font-weight: 700;
+  color: var(--dark-2);
 }
 
-.hero h2{
-font-size:52px;
-margin-bottom:18px;
+.nav-links a:hover {
+  color: var(--primary-2);
 }
 
-.hero p{
-font-size:18px;
-color:#d8e3f0;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.hero-actions{
-margin-top:24px;
-display:flex;
-gap:12px;
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: var(--white);
+  box-shadow: 0 16px 35px rgba(0, 126, 255, 0.28);
 }
 
-.hero-card img{
-width:100%;
-height:360px;
-object-fit:cover;
-border-radius:22px;
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 126, 255, 0.35);
 }
 
-section{
-padding:80px 0;
+.btn-outline {
+  border: 2px solid rgba(255,255,255,0.28);
+  color: var(--white);
+  background: rgba(255,255,255,0.08);
 }
 
-.section-title-small{
-color:#2563eb;
-letter-spacing:.22em;
-font-size:13px;
-font-weight:700;
-margin-bottom:10px;
+.btn-outline:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
 }
 
-.section-title{
-font-size:40px;
-margin-bottom:16px;
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(100deg, rgba(4, 19, 39, 0.92) 0%, rgba(7, 31, 60, 0.80) 45%, rgba(0, 126, 255, 0.18) 100%),
+    url('ar-condicionado-01.jpg') center/cover no-repeat;
+  color: var(--white);
+  overflow: hidden;
 }
 
-.section-text{
-color:#475569;
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.35;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-margin-top:30px;
+.hero::before {
+  width: 320px;
+  height: 320px;
+  background: #00bbff;
+  top: -80px;
+  right: -90px;
 }
 
-.card{
-background:white;
-border:1px solid #e6eef8;
-border-radius:24px;
-padding:28px;
+.hero::after {
+  width: 260px;
+  height: 260px;
+  background: #005eff;
+  bottom: -90px;
+  left: -70px;
 }
 
-.gold-line{
-width:64px;
-height:4px;
-background:linear-gradient(90deg,#38bdf8,#f4d17a);
-margin-bottom:16px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: center;
+  padding: 80px 0;
 }
 
-.coverage-box{
-background:white;
-border:1px solid #e8eef5;
-border-radius:28px;
-padding:34px;
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #bde7ff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 18px;
 }
 
-.areas{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-margin-top:20px;
+.hero h1 {
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.05;
+  margin-bottom: 18px;
+  letter-spacing: -1.2px;
 }
 
-.area{
-background:#f0f8ff;
-border-radius:16px;
-padding:14px;
-text-align:center;
-font-weight:700;
+.hero p {
+  font-size: 18px;
+  color: #d6eaff;
+  max-width: 700px;
+  margin-bottom: 28px;
 }
 
-.highlight-box{
-background:linear-gradient(135deg,#38bdf8,#2563eb,#0f172a);
-color:white;
-border-radius:28px;
-padding:42px;
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-.image-box img{
-width:100%;
-height:360px;
-object-fit:cover;
-border-radius:22px;
+.hero-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: var(--radius-xl);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
 }
 
-.contact-box{
-background:#08101e;
-color:white;
-border-radius:30px;
-padding:42px;
+.hero-card img {
+  width: 100%;
+  border-radius: 22px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255,255,255,0.16);
 }
 
-.whatsapp-float{
-position:fixed;
-right:18px;
-bottom:18px;
-background:#22c55e;
-color:white;
-padding:14px 18px;
-border-radius:999px;
-font-weight:700;
+.hero-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.footer{
-background:#f8fbff;
-border-top:1px solid #e8eef5;
-padding:24px;
-text-align:center;
+.hero-card ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  color: #e5f3ff;
 }
 
-</style>
+.hero-card ul li:last-child {
+  border-bottom: none;
+}
+
+section {
+  padding: 92px 0;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 46px;
+}
+
+.section-intro span {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(0, 157, 255, 0.09);
+  color: var(--primary-3);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.section-intro h2 {
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.1;
+  margin-bottom: 14px;
+  color: var(--dark);
+}
+
+.section-intro p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: 0 14px 38px rgba(6, 47, 96, 0.08);
+  border: 1px solid rgba(8, 63, 147, 0.08);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 44px rgba(6, 47, 96, 0.12);
+}
+
+.service-number {
+  font-size: 14px;
+  color: var(--primary-2);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.about {
+  background: linear-gradient(180deg, #f7fbff 0%, #edf6ff 100%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.about-images img {
+  border-radius: 24px;
+  min-height: 240px;
+  object-fit: cover;
+  box-shadow: 0 18px 36px rgba(7, 31, 60, 0.12);
+}
+
+.about-text h2 {
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.12;
+  margin-bottom: 18px;
+  color: var(--dark);
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+.about-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.about-list li {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-weight: 700;
+  color: var(--dark-2);
+  box-shadow: 0 10px 26px rgba(7, 31, 60, 0.06);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 280px;
+  box-shadow: 0 18px 36px rgba(7, 31, 60, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px;
+  background: linear-gradient(180deg, transparent 0%, rgba(4, 19, 39, 0.88) 100%);
+  color: var(--white);
+}
+
+.gallery-overlay h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.stats {
+  background: linear-gradient(120deg, var(--dark), var(--primary-3));
+  color: var(--white);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 28px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.stat-card h3 {
+  font-size: 44px;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: #8fd7ff;
+}
+
+.stat-card p {
+  color: #d7eaff;
+  font-weight: 700;
+}
+
+.quote {
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+
+.quote-box {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 26px;
+  align-items: stretch;
+  background: var(--white);
+  border-radius: 30px;
+  box-shadow: 0 24px 55px rgba(7, 31, 60, 0.12);
+  overflow: hidden;
+  border: 1px solid rgba(8, 63, 147, 0.08);
+}
+
+.quote-info {
+  background:
+    linear-gradient(180deg, rgba(4, 19, 39, 0.9), rgba(11, 109, 240, 0.86)),
+    url('ar-condicionado-04.jpg') center/cover no-repeat;
+  color: var(--white);
+  padding: 38px;
+  min-height: 100%;
+}
+
+.quote-info h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.quote-info p {
+  color: #ddedff;
+  margin-bottom: 20px;
+}
+
+.quote-points li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  font-weight: 700;
+}
+
+.quote-points li:last-child {
+  border-bottom: none;
+}
+
+.quote-form {
+  padding: 38px;
+}
+
+.quote-form h3 {
+  font-size: 30px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.quote-form p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--dark-2);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(8, 63, 147, 0.14);
+  background: #f7fbff;
+  color: var(--text);
+  border-radius: 14px;
+  padding: 15px 16px;
+  outline: none;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-2);
+  box-shadow: 0 0 0 4px rgba(0, 126, 255, 0.1);
+  background: var(--white);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.contact-card {
+  background: var(--white);
+  border-radius: 22px;
+  padding: 26px;
+  border: 1px solid rgba(8, 63, 147, 0.08);
+  box-shadow: 0 16px 34px rgba(7, 31, 60, 0.08);
+}
+
+.contact-card h3 {
+  font-size: 22px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.contact-card .role {
+  color: var(--primary-2);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.contact-card p,
+.contact-card a {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.cta-band {
+  padding: 0 0 92px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--primary), var(--primary-3));
+  border-radius: 30px;
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--white);
+  box-shadow: 0 24px 50px rgba(0, 126, 255, 0.25);
+}
+
+.cta-box h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.12;
+  margin-bottom: 8px;
+}
+
+.cta-box p {
+  color: #e6f4ff;
+  max-width: 700px;
+}
+
+footer {
+  background: linear-gradient(180deg, var(--dark) 0%, #020d1d 100%);
+  color: var(--white);
+  padding: 36px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-brand img {
+  height: 48px;
+  width: auto;
+  filter: brightness(1.05);
+}
+
+.footer-brand p,
+.footer-links a {
+  color: #cfe6ff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366, #17b858);
+  color: var(--white);
+  font-size: 26px;
+  box-shadow: 0 18px 36px rgba(37, 211, 102, 0.28);
+  border: 3px solid rgba(255,255,255,0.16);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.06);
+}
+
+@media (max-width: 1080px) {
+  .hero-content,
+  .about-grid,
+  .quote-box {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid,
+  .stats-grid,
+  .contacts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-links {
+    display: none;
+  }
+
+  .form-grid,
+  .about-list,
+  .services-grid,
+  .stats-grid,
+  .gallery-grid,
+  .contacts-grid,
+  .about-images {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-box,
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .btn {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .quote-form,
+  .quote-info,
+  .service-card,
+  .contact-card,
+  .stat-card {
+    padding: 22px;
+  }
+
+  .topbar .container {
+    font-size: 13px;
+  }
+}
+
+  </style>
 </head>
-
 <body>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span><strong>Email:</strong> portugal.cleanair@gmail.com</span>
+        <span><strong>Atendimento:</strong> Segunda a Sábado</span>
+      </div>
+      <div class="topbar-right">
+        <span><strong>Diógenes:</strong> 968 829 592</span>
+        <span><strong>Leila:</strong> +351 966195567</span>
+      </div>
+    </div>
+  </div>  <header>
+    <div class="container">
+      <nav>
+        <a href="#inicio" class="logo" aria-label="Clean Air">
+          <img src="logo-clean-air-completa.png" alt="Logo Clean Air" />
+        </a><div class="nav-links">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#empresa">Empresa</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#contactos">Contactos</a>
+    </div>
 
-<div class="topbar">
-<div class="container nav">
-
-<div class="brand">
-<div class="brand-box">A</div>
-<div>
-<h1>CLEAN AIR</h1>
-<p>Climatização de Excelência</p>
-</div>
-</div>
-
-<div class="nav-links">
-<a href="#servicos" class="btn btn-outline">Serviços</a>
-<a href="#contacto" class="btn btn-primary">Pedir orçamento</a>
-</div>
-
-</div>
-</div>
-
-
-<header class="hero">
-
-<div class="container hero-grid">
-
-<div>
-
-<h2>
-Conforto térmico profissional em todo Portugal
-</h2>
-
-<p>
-Instalação, manutenção e assistência técnica especializada em climatização residencial e empresarial.
-</p>
-
-<div class="hero-actions">
-
-<a href="#sobre"
-class="btn"
-style="background:white;color:#0f172a;">
-Conhecer a empresa
-</a>
-
-<a href="https://wa.me/351968829592"
-class="btn"
-style="background:rgba(255,255,255,.10);color:white;border:1px solid rgba(255,255,255,.18);">
-Falar no WhatsApp
-</a>
-
+    <a class="btn btn-primary" href="#orcamento">Pedir orçamento</a>
+  </nav>
 </div>
 
-</div>
-
-<div class="hero-card">
-
-<img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80">
-
-</div>
-
-</div>
-
-</header>
-
+  </header>  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <div>
+          <div class="hero-badge">Climatização premium em Portugal</div>
+          <h1>Excelência em climatização com imagem premium, resposta rápida e serviço profissional.</h1>
+          <p>
+            A Clean Air entrega soluções modernas e eficientes em ar condicionado, VRVs, ventilação,
+            bomba de calor e manutenção técnica, com foco em conforto, desempenho e atendimento de alto nível.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#orcamento">Solicitar orçamento</a>
+            <a class="btn btn-outline" href="https://wa.me/351968829592?text=Olá%2C%20quero%20um%20orçamento%20da%20Clean%20Air." target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </div>
+        </div><div class="hero-card">
+      <img src="ar-condicionado-02.jpg" alt="Técnico a trabalhar em ar condicionado" />
+      <h3>Soluções técnicas com padrão de excelência</h3>
+      <ul>
+        <li>Instalação de ar condicionado e VRVs</li>
+        <li>Manutenção preventiva e corretiva</li>
+        <li>Ventilação e bomba de calor</li>
+        <li>Certificação de gases fluorados</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <section id="servicos">
+  <div class="container">
+    <div class="section-intro">
+      <span>Serviços especializados</span>
+      <h2>Serviços pensados para clientes que procuram qualidade, imagem e confiança.</h2>
+      <p>
+        Adaptamos cada solução à necessidade do cliente, com atendimento técnico e comercial organizado,
+        linguagem profissional e foco total em resultado.
+      </p>
+    </div>
 
-<div class="container">
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-number">01</div>
+        <h3>Manutenção preventiva</h3>
+        <p>Planeamento técnico para manter os equipamentos eficientes, seguros e com maior durabilidade.</p>
+      </article>
 
-<div class="section-title-small">
-Cobertura
-</div>
+      <article class="service-card">
+        <div class="service-number">02</div>
+        <h3>Manutenção corretiva</h3>
+        <p>Atuação rápida para corrigir falhas, restaurar desempenho e reduzir paragens indesejadas.</p>
+      </article>
 
-<h2 class="section-title">
-Atendimento em todo Portugal
-</h2>
+      <article class="service-card">
+        <div class="service-number">03</div>
+        <h3>Instalação</h3>
+        <p>Instalação técnica com acabamento profissional para espaços residenciais e comerciais.</p>
+      </article>
 
-<p class="section-text">
-Executamos serviços técnicos de climatização em todo o território nacional.
-</p>
+      <article class="service-card">
+        <div class="service-number">04</div>
+        <h3>Instalação de VRVs</h3>
+        <p>Soluções avançadas para projetos que exigem climatização mais robusta e inteligente.</p>
+      </article>
 
+      <article class="service-card">
+        <div class="service-number">05</div>
+        <h3>Ar condicionado</h3>
+        <p>Montagem, revisão, limpeza e otimização de sistemas de ar condicionado com padrão premium.</p>
+      </article>
 
-<div class="areas">
+      <article class="service-card">
+        <div class="service-number">06</div>
+        <h3>Ventilação</h3>
+        <p>Melhoria da circulação de ar e do conforto ambiental para espaços residenciais e empresariais.</p>
+      </article>
 
-<div class="area">Lisboa</div>
-<div class="area">Porto</div>
-<div class="area">Braga</div>
-<div class="area">Coimbra</div>
-<div class="area">Faro</div>
-<div class="area">Todo Portugal</div>
+      <article class="service-card">
+        <div class="service-number">07</div>
+        <h3>Bomba de calor</h3>
+        <p>Instalação e assistência em sistemas com eficiência energética e alto desempenho térmico.</p>
+      </article>
 
-</div>
-
-</div>
-
+      <article class="service-card">
+        <div class="service-number">08</div>
+        <h3>Certificação de gases fluorados</h3>
+        <p>Atuação com responsabilidade técnica e conformidade para serviços que exigem certificação.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
+<section class="about" id="empresa">
+  <div class="container about-grid">
+    <div class="about-images">
+      <img src="ar-condicionado-03.jpg" alt="Limpeza e manutenção de sistema de climatização" />
+      <img src="ar-condicionado-04.jpg" alt="Técnico a verificar equipamento de climatização" />
+      <img src="ar-condicionado-05.jpg" alt="Instalação de ar condicionado em parede" />
+      <img src="ar-condicionado-01.jpg" alt="Equipa técnica Clean Air em serviço" />
+    </div>
 
-<section id="contacto">
-
-<div class="container contact-box">
-
-<h3>Contacte a Clean Air</h3>
-
-<p>
-Equipa técnica preparada para responder rapidamente ao seu pedido.
-</p>
-
-<p>
-Telefone: +351 968 829 592
-</p>
-
-<p>
-Telefone: +351 966 195 567
-</p>
-
-<p>
-Email: portugal.cleanair@gmail.com
-</p>
-
-<a
-href="https://wa.me/351968829592"
-class="btn btn-primary">
-
-Falar no WhatsApp
-
-</a>
-
-</div>
-
+    <div class="about-text">
+      <h2>Uma marca criada para transmitir seriedade, qualidade e confiança.</h2>
+      <p>
+        A Clean Air foi pensada para clientes que valorizam atendimento profissional, boa apresentação,
+        comunicação organizada e execução técnica de excelência.
+      </p>
+      <p>
+        Trabalhamos com foco em climatização de alto padrão, combinando estética premium, resposta rápida,
+        suporte técnico e soluções adequadas a cada necessidade.
+      </p>
+      <ul class="about-list">
+        <li>Atendimento profissional</li>
+        <li>Resposta rápida no WhatsApp</li>
+        <li>Imagem premium da marca</li>
+        <li>Serviço técnico especializado</li>
+        <li>Projetos residenciais e comerciais</li>
+        <li>Compromisso com excelência</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
+<section id="galeria">
+  <div class="container">
+    <div class="section-intro">
+      <span>Galeria visual</span>
+      <h2>Imagens que reforçam a presença premium da Clean Air.</h2>
+      <p>
+        Uma apresentação visual forte ajuda a transmitir profissionalismo, qualidade e confiança logo no primeiro contacto.
+      </p>
+    </div>
 
-<div class="footer">
-© 2026 Clean Air — Climatização de Excelência
+    <div class="gallery-grid">
+      <article class="gallery-item">
+        <img src="ar-condicionado-01.jpg" alt="Manutenção em ar condicionado" />
+        <div class="gallery-overlay">
+          <h3>Manutenção técnica</h3>
+          <p>Atendimento profissional com foco em eficiência e segurança.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <img src="ar-condicionado-02.jpg" alt="Serviço em unidade exterior" />
+        <div class="gallery-overlay">
+          <h3>Unidade exterior</h3>
+          <p>Intervenções com padrão técnico e acabamento organizado.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <img src="ar-condicionado-03.jpg" alt="Verificação de filtro de ar condicionado" />
+        <div class="gallery-overlay">
+          <h3>Revisão e limpeza</h3>
+          <p>Performance, higiene e durabilidade do sistema.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <img src="ar-condicionado-04.jpg" alt="Verificação técnica de pressão" />
+        <div class="gallery-overlay">
+          <h3>Diagnóstico técnico</h3>
+          <p>Leitura precisa para manutenção corretiva e preventiva.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <img src="ar-condicionado-05.jpg" alt="Instalação de ar condicionado em parede" />
+        <div class="gallery-overlay">
+          <h3>Instalação premium</h3>
+          <p>Montagem bem apresentada para residências e empresas.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item">
+        <img src="ar-condicionado-02.jpg" alt="Trabalho técnico especializado" />
+        <div class="gallery-overlay">
+          <h3>Execução profissional</h3>
+          <p>Imagem forte para valorizar a marca e gerar confiança.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="section-intro" style="color:#fff;">
+      <span style="background:rgba(255,255,255,0.12); color:#bde7ff;">Porque escolher a Clean Air</span>
+      <h2 style="color:#fff;">Climatização com presença premium e atendimento de confiança.</h2>
+      <p style="color:#d8ebff;">Criamos um site pensado para valorizar a marca e facilitar o pedido de orçamento.</p>
+    </div>
+
+    <div class="stats-grid">
+      <article class="stat-card">
+        <h3>24h</h3>
+        <p>Resposta comercial rápida</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>08</h3>
+        <p>Serviços principais em destaque</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>100%</h3>
+        <p>Foco em imagem profissional</p>
+      </article>
+
+      <article class="stat-card">
+        <h3>Premium</h3>
+        <p>Apresentação forte para clientes exigentes</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="orcamento">
+  <div class="container">
+    <div class="quote-box">
+      <div class="quote-info">
+        <h2>Peça o seu orçamento agora no WhatsApp.</h2>
+        <p>
+          Preencha os dados abaixo, escolha o serviço desejado e clique no botão para enviar automaticamente o pedido de orçamento.
+        </p>
+        <ul class="quote-points">
+          <li>Escolha o serviço pretendido</li>
+          <li>Informe o nome e telefone</li>
+          <li>Escreva a morada do local</li>
+          <li>Envie tudo direto para o WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="quote-form">
+        <h3>Solicitar orçamento</h3>
+        <p>Preencha os campos abaixo para enviar um pedido direto ao WhatsApp da Clean Air.</p>
+
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required />
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="Digite o seu telefone" required />
+            </div>
+
+            <div class="form-group full">
+              <label for="servico">Serviço pretendido</label>
+              <select id="servico" name="servico" required>
+                <option value="">Selecione um serviço</option>
+                <option>Manutenção preventiva</option>
+                <option>Manutenção corretiva</option>
+                <option>Instalação</option>
+                <option>Instalação de VRVs</option>
+                <option>Ar condicionado</option>
+                <option>Ventilação</option>
+                <option>Bomba de calor</option>
+                <option>Certificação de gases fluorados</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="morada">Morada / endereço do serviço</label>
+              <input type="text" id="morada" name="morada" placeholder="Digite a morada do local" required />
+            </div>
+
+            <div class="form-group full">
+              <label for="mensagem">Detalhes adicionais</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Explique rapidamente o que precisa"></textarea>
+            </div>
+
+            <div class="form-group full">
+              <button type="submit" class="btn btn-primary">Enviar orçamento no WhatsApp</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contactos">
+  <div class="container">
+    <div class="section-intro">
+      <span>Contactos</span>
+      <h2>Atendimento comercial e técnico com apresentação profissional.</h2>
+      <p>Escolha o canal mais rápido para falar com a equipa da Clean Air.</p>
+    </div>
+
+    <div class="contacts-grid">
+      <article class="contact-card">
+        <h3>Diógenes Souza</h3>
+        <div class="role">Supervisor Técnico AVAC</div>
+        <p><a href="tel:968829592">968 829 592</a></p>
+        <p><a href="https://wa.me/351968829592?text=Olá%2C%20quero%20falar%20com%20a%20Clean%20Air." target="_blank" rel="noopener">Falar no WhatsApp</a></p>
+      </article>
+
+      <article class="contact-card">
+        <h3>Leila Pereira</h3>
+        <div class="role">Gerente Comercial</div>
+        <p><a href="tel:+351966195567">+351 966195567</a></p>
+        <p><a href="mailto:portugal.cleanair@gmail.com">portugal.cleanair@gmail.com</a></p>
+      </article>
+
+      <article class="contact-card">
+        <h3>Atendimento Clean Air</h3>
+        <div class="role">Climatização de Excelência</div>
+        <p>Orçamentos rápidos, atendimento organizado e imagem premium para clientes exigentes.</p>
+        <p><a href="#orcamento">Pedir orçamento agora</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-box">
+      <div>
+        <h2>Quer valorizar a sua marca e fechar mais serviços?</h2>
+        <p>
+          Este site foi pensado para transmitir confiança, facilitar o pedido de orçamento e apresentar a Clean Air com uma imagem premium e profissional.
+        </p>
+      </div>
+      <a class="btn btn-outline" href="#orcamento">Pedir orçamento agora</a>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="logo-clean-air-completa.png" alt="Logo Clean Air" />
+        <div>
+          <strong>Clean Air | Climatização de Excelência</strong>
+          <p>Manutenção, instalação, VRVs, ventilação e bomba de calor.</p>
+        </div>
+      </div><div class="footer-links">
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#orcamento">Orçamento</a>
+    <a href="#contactos">Contactos</a>
+  </div>
 </div>
 
+  </footer><a class="whatsapp-float" href="https://wa.me/351968829592?text=Olá%2C%20quero%20um%20orçamento%20da%20Clean%20Air." target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
 
-<a
-class="whatsapp-float"
-href="https://wa.me/351968829592">
+  <script>
+    const quoteForm = document.getElementById('quoteForm');
 
-WhatsApp
+    quoteForm.addEventListener('submit', function (event) {
+      event.preventDefault();
 
-</a>
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const servico = document.getElementById('servico').value.trim();
+      const morada = document.getElementById('morada').value.trim();
+      const mensagemExtra = document.getElementById('mensagem').value.trim();
 
+      const numeroWhatsApp = '351968829592';
 
-</body>
+      let mensagem = `Olá, quero pedir um orçamento da Clean Air.%0A%0A`;
+      mensagem += `Nome: ${nome}%0A`;
+      mensagem += `Telefone: ${telefone}%0A`;
+      mensagem += `Serviço: ${servico}%0A`;
+      mensagem += `Morada: ${morada}%0A`;
+
+      if (mensagemExtra !== '') {
+        mensagem += `Detalhes: ${mensagemExtra}%0A`;
+      }
+
+      const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+      window.open(url, '_blank');
+    });
+  </script></body>
 </html>
